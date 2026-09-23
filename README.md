@@ -191,6 +191,11 @@
         <button id="btnEmail" class="btn-email" type="button" onclick="shareViaEmail()">
             Share Summary via Email
         </button>
+
+        <button type="button" onclick="clearAll()" style="background: #6b7280;">
+    Clear All
+</button>
+
     </div>
 
     <div id="counterArea" class="counter-badge">
@@ -633,6 +638,15 @@
                 });
             });
         }
+
+function clearAll() {
+    document.getElementById("logInput").value = "";
+    resetResults();
+    document.getElementById("totalCount").textContent = "0";
+    document.getElementById("logInput").focus();
+}
+
+
 
         enableTableControls();
         updateTableWidth();
